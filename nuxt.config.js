@@ -25,14 +25,12 @@ export default {
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    script:[
-      {src:"https://kit.fontawesome.com/a40ef71e31.js"}
-    ]
+    script: [{ src: 'https://kit.fontawesome.com/a40ef71e31.js' }],
   },
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['@/assets/styling/global.scss'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
