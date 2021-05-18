@@ -80,9 +80,11 @@ export default {
   margin: 0;
 }
 
+$border-color: rgba(156, 163, 175, 0.2);
+
 .navbar {
   width: 100%;
-  border-bottom: 1px solid rgba(156, 163, 175, 0.2);
+  border-bottom: 1px solid $border-color;
 
   .container {
     display: flex;
@@ -128,7 +130,7 @@ export default {
 
         &:hover {
           // background-color: rgb(227, 242, 253); interseting color
-          background-color: rgba(156, 163, 175, 0.2);
+          background-color: $border-color;
         }
       }
 
@@ -152,7 +154,7 @@ export default {
 
   .active-class {
     font-weight: bold;
-    background-color: rgba(156, 163, 175, 0.2);
+    background-color: $border-color;
   }
 }
 </style>
