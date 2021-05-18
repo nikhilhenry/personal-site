@@ -11,10 +11,30 @@
         </header>
         <ul class="nav-items">
           <div class="navigation">
-            <li class="nav-item"><nuxt-link to="#">home</nuxt-link></li>
-            <li class="nav-item"><nuxt-link to="#">about me</nuxt-link></li>
-            <li class="nav-item"><nuxt-link to="#">series</nuxt-link></li>
-            <li class="nav-item"><nuxt-link to="#">projects</nuxt-link></li>
+            <li
+              class="nav-item"
+              :class="{ 'active-class': activeRoute == 'index' }"
+            >
+              <nuxt-link to="/">home</nuxt-link>
+            </li>
+            <li
+              class="nav-item"
+              :class="{ 'active-class': activeRoute == 'about' }"
+            >
+              <nuxt-link to="about">about me</nuxt-link>
+            </li>
+            <li
+              class="nav-item"
+              :class="{ 'active-class': activeRoute == 'series' }"
+            >
+              <nuxt-link to="#">series</nuxt-link>
+            </li>
+            <li
+              class="nav-item"
+              :class="{ 'active-class': activeRoute == 'projects' }"
+            >
+              <nuxt-link to="#">projects</nuxt-link>
+            </li>
           </div>
           <div class="social">
             <li class="nav-item">
@@ -41,6 +61,16 @@
     <Nuxt />
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    activeRoute() {
+      return this.$route.name
+    },
+  },
+}
+</script>
 
 <style lang="scss">
 *,
@@ -118,6 +148,11 @@
         display: flex;
       }
     }
+  }
+
+  .active-class {
+    font-weight: bold;
+    background-color: rgba(156, 163, 175, 0.2);
   }
 }
 </style>
