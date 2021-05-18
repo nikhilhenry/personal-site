@@ -92,7 +92,7 @@ $border-color: rgba(156, 163, 175, 0.2);
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    margin: 1rem auto 0;
+    margin: 0.5rem auto 0;
 
     .navbar-header {
       display: flex;
@@ -102,10 +102,18 @@ $border-color: rgba(156, 163, 175, 0.2);
       width: 100%;
       margin: 1rem auto;
       font-size: 24px;
+      padding-bottom: 1rem;
 
       .title {
         font-weight: bold;
         font-size: 2rem;
+      }
+      .icon {
+        padding: 0.5rem 0.8rem;
+        border-radius: 2rem;
+        &:hover {
+          background-color: $border-color;
+        }
       }
     }
 
