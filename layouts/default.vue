@@ -2,7 +2,7 @@
   <div>
     <!-- navbar -->
     <div class="navbar">
-      <div class="container">
+      <div class="n-container">
         <header class="navbar-header">
           <div class="title">Nikhil Henry</div>
           <div class="icon">
@@ -86,7 +86,7 @@ $border-color: rgba(156, 163, 175, 0.2);
   width: 100%;
   border-bottom: 1px solid $border-color;
 
-  .container {
+  .n-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
