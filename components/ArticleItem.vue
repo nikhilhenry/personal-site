@@ -5,22 +5,21 @@
       class="cover-img"
     />
     <div class="content">
-      <h3 class="title">Golden Gate Bridge</h3>
+      <h2 class="title">Golden Gate Bridge</h2>
       <section class="stats">
         <span class="date">May 4, 2021</span>
         <span class="duration">
           <i class="far fa-clock"></i>
-          <span>5 min</span>
+          <span>5 min read</span>
         </span>
       </section>
       <p class="excerpt">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
         velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum."
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt ...
       </p>
     </div>
   </article>
@@ -38,6 +37,23 @@
     width: 100%;
     border-radius: 0.5em;
     object-fit: cover;
+  }
+
+  .content {
+    padding: 1.5rem 0 1.5rem;
+
+    .title {
+      font-size: 1.8rem;
+    }
+
+    .stats {
+      margin: 1rem 0 1rem;
+      color: rgba(97, 97, 97, 1);
+
+      .duration {
+        margin-left: 1rem;
+      }
+    }
   }
 }
 </style>
