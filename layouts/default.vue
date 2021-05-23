@@ -59,6 +59,23 @@
       </div>
     </div>
     <Nuxt />
+    <footer class="footer">
+      <div class="socials">
+        <span>stay connected</span>
+        <div class="icons">
+          <a href="https://github.com/nikhilhenry" target="_"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/nikhil-henry-07b79a135/"
+            target="_"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <nuxt-link to="contact"><i class="fas fa-paper-plane"></i></nuxt-link>
+        </div>
+      </div>
+      <span class="copy">&copy; 2021 Nikhil Henry</span>
+    </footer>
   </div>
 </template>
 
@@ -163,6 +180,44 @@ $border-color: rgba(156, 163, 175, 0.2);
   .active-class {
     font-weight: bold;
     background-color: $border-color;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: rgba(250, 250, 250, 1);
+  border-top: 1px solid #e5e7eb;
+  margin-top: 3.5rem;
+  color: #616161;
+
+  .socials {
+    text-align: center;
+    margin-bottom: 2rem;
+    span {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      padding: 2rem 0 2rem;
+      display: block;
+    }
+    .icons {
+      display: flex;
+      width: 250px;
+      justify-content: space-evenly;
+      a {
+        font-size: 32px;
+        color: #4b5563;
+      }
+    }
+  }
+
+  .copy {
+    display: block;
+    padding: 0 0 1rem;
+    font-size: 1.1rem;
   }
 }
 </style>
