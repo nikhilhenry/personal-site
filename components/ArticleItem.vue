@@ -12,6 +12,7 @@
           <i class="far fa-clock"></i>
           <span>5 min read</span>
         </span>
+        <nuxt-link to="#" class="series">#exploration</nuxt-link>
       </section>
       <p class="excerpt">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -30,6 +31,7 @@
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid #dfe4e7;
+  cursor: pointer;
 
   .cover-img {
     max-height: 280px;
@@ -50,7 +52,11 @@
       color: rgba(97, 97, 97, 1);
 
       .duration {
-        margin-left: 1rem;
+        margin: 0 1rem 0;
+      }
+      .series {
+        text-decoration: none;
+        color: #3eb0ef;
       }
     }
   }
