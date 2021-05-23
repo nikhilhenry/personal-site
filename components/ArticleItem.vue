@@ -1,0 +1,43 @@
+<template>
+  <article class="article">
+    <img
+      src="https://images.unsplash.com/photo-1621675110684-84f7d1914cdc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2148&q=80"
+      class="cover-img"
+    />
+    <div class="content">
+      <h3 class="title">Golden Gate Bridge</h3>
+      <section class="stats">
+        <span class="date">May 4, 2021</span>
+        <span class="duration">
+          <i class="far fa-clock"></i>
+          <span>5 min</span>
+        </span>
+      </section>
+      <p class="excerpt">
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum."
+      </p>
+    </div>
+  </article>
+</template>
+
+<style lang="scss" scoped>
+.article {
+  display: flex;
+  flex: 1 1 301px;
+  flex-direction: column;
+  border-bottom: 1px solid #dfe4e7;
+
+  .cover-img {
+    max-height: 300px;
+    width: 100%;
+    border-radius: 0.5em;
+    object-fit: cover;
+  }
+}
+</style>
