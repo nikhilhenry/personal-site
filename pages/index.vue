@@ -16,6 +16,7 @@
       </div>
       <div class="articles">
         <Article />
+        <Article />
       </div>
     </section>
   </div>
@@ -65,7 +66,7 @@ export default {
 .articles {
   margin-top: 7rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  grid-gap: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 3rem;
 }
 </style>
