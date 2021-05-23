@@ -41,7 +41,7 @@
   }
 
   .content {
-    padding: 1.5rem 0 1.5rem;
+    padding: 1.5rem 0 2rem;
 
     .title {
       font-size: 1.8rem;
