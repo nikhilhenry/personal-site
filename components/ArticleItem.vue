@@ -19,7 +19,7 @@
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
         velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt ...
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt...
       </p>
     </div>
   </article>
@@ -28,12 +28,11 @@
 <style lang="scss" scoped>
 .article {
   display: flex;
-  flex: 1 1 301px;
   flex-direction: column;
   border-bottom: 1px solid #dfe4e7;
 
   .cover-img {
-    max-height: 300px;
+    max-height: 280px;
     width: 100%;
     border-radius: 0.5em;
     object-fit: cover;
