@@ -14,12 +14,21 @@
           </p>
         </div>
       </div>
+      <div class="articles">
+        <Article />
+      </div>
     </section>
   </div>
 </template>
 
 <script>
-export default {}
+import ArticleItem from '@/components/ArticleItem'
+
+export default {
+  components: {
+    Article: ArticleItem,
+  },
+}
 </script>
 
 <style lang="scss">
@@ -51,5 +60,12 @@ export default {}
   .summary {
     font-size: 1.1rem;
   }
+}
+
+.articles {
+  margin-top: 7rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-gap: 2em;
 }
 </style>
