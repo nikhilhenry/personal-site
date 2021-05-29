@@ -21,13 +21,13 @@
               class="nav-item"
               :class="{ 'active-class': activeRoute == 'about' }"
             >
-              <nuxt-link to="about">about me</nuxt-link>
+              <nuxt-link to="/about">about me</nuxt-link>
             </li>
             <li
               class="nav-item"
               :class="{ 'active-class': activeRoute == 'collections' }"
             >
-              <nuxt-link to="collections">collections</nuxt-link>
+              <nuxt-link to="/collections">collections</nuxt-link>
             </li>
             <li
               class="nav-item"
