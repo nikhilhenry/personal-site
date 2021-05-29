@@ -25,9 +25,9 @@
             </li>
             <li
               class="nav-item"
-              :class="{ 'active-class': activeRoute == 'series' }"
+              :class="{ 'active-class': activeRoute == 'collections' }"
             >
-              <nuxt-link to="series">series</nuxt-link>
+              <nuxt-link to="collections">collections</nuxt-link>
             </li>
             <li
               class="nav-item"

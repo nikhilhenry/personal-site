@@ -1,10 +1,13 @@
 <template>
-  <div class="series">
+  <div class="collections">
     <div class="hero">
       <div class="wrapper">
-        <h1 class="title">📝 Series</h1>
+        <h1 class="title">📝 Collections</h1>
         <p class="subtitle">Rabit holes of thought...</p>
       </div>
+    </div>
+    <div class="container">
+      <!-- list of collections -->
     </div>
   </div>
 </template>
