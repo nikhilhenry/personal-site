@@ -8,12 +8,22 @@
     </div>
     <div class="container">
       <!-- list of collections -->
+      <div class="articles">
+        <Article />
+        <Article />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+import ArticleItem from '@/components/ArticleItem'
+
+export default {
+  components: {
+    Article: ArticleItem,
+  },
+}
 </script>
 
 <style lang="scss">
@@ -39,5 +49,12 @@ export default {}
   .subtitle {
     font-size: 1.5rem;
   }
+}
+
+.articles {
+  margin-top: 7rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 3rem;
 }
 </style>
