@@ -27,7 +27,7 @@
               class="nav-item"
               :class="{ 'active-class': activeRoute == 'series' }"
             >
-              <nuxt-link to="#">series</nuxt-link>
+              <nuxt-link to="series">series</nuxt-link>
             </li>
             <li
               class="nav-item"
