@@ -1,6 +1,6 @@
 <template>
   <article class="article">
-    <nuxt-link to="articles/test_article" class="wrapper">
+    <nuxt-link to="/articles/test_article" class="wrapper">
       <img
         src="https://images.unsplash.com/photo-1621675110684-84f7d1914cdc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2148&q=80"
         class="cover-img"
@@ -13,7 +13,12 @@
             <i class="far fa-clock"></i>
             <span>5 min read</span>
           </span>
-          <nuxt-link to="#" class="series">#exploration</nuxt-link>
+          <nuxt-link
+            to="/collections/exploration"
+            class="series"
+            v-if="!inCollection"
+            >#exploration</nuxt-link
+          >
         </section>
         <p class="excerpt">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -28,6 +33,14 @@
     </nuxt-link>
   </article>
 </template>
+
+<script>
+export default {
+  props: {
+    inCollection: Boolean,
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 .wrapper {
