@@ -52,7 +52,7 @@ export default {
 }
 
 .articles {
-  margin-top: 7rem;
+  margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 3rem;
