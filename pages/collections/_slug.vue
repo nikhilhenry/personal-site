@@ -9,19 +9,19 @@
     <div class="container">
       <!-- list of collections -->
       <div class="articles">
-        <Collection />
-        <Collection />
+        <Article />
+        <Article />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import CollectionItem from '@/components/CollectionItem'
+import ArticleItem from '@/components/ArticleItem'
 
 export default {
   components: {
-    Collection: CollectionItem,
+    Article: ArticleItem,
   },
   data() {
     return {
