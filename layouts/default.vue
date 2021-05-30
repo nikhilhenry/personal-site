@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- @todo wrap link around element -->
     <!-- navbar -->
     <div class="navbar">
       <div class="n-container">
