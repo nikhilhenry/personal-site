@@ -99,6 +99,7 @@
       width: 95%;
       text-align: center;
       font-weight: bold;
+      transition: all ease-out 0.2s;
       i {
         margin-right: 0.5rem;
       }
@@ -106,10 +107,20 @@
     // find a better color
     .source {
       background-color: #4facfe;
+      border: 1px solid #4facfe;
       margin-right: 15px;
+      &:hover {
+        color: #4facfe;
+        background-color: transparent;
+      }
     }
     .build {
       background-color: #8187dc;
+      border: 1px solid #8187dc;
+      &:hover {
+        color: #8187dc;
+        background-color: transparent;
+      }
     }
   }
 }
