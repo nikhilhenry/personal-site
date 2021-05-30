@@ -1,9 +1,12 @@
 <template>
   <div class="collections">
-    <div class="hero" :style="{ backgroundImage: 'url(' + image + ')' }">
+    <div
+      class="hero"
+      :style="{ backgroundImage: 'url(' + collection.coverImage + ')' }"
+    >
       <div class="wrapper">
-        <h1 class="title">🧭 Exploration</h1>
-        <p class="subtitle">Rabit holes of thought...</p>
+        <h1 class="title">{{ collection.title }}</h1>
+        <p class="subtitle">{{ collection.subtitle }}</p>
       </div>
     </div>
     <div class="container">
@@ -28,7 +31,16 @@ export default {
     Article: ArticleItem,
   },
   async asyncData({ $content, params, error }) {
-    const path = `/${params.slug || 'index'}`
+    const path = params.slug || ''
+
+    // fetch collection data
+    const collection = await $content('collections', path)
+      .where({})
+      .fetch()
+      .catch(() => {
+        return error({ statusCode: 404, message: 'Collection not found' })
+      })
+
     const articles = await $content('articles')
       .where({ collection: path })
       .fetch()
@@ -38,6 +50,7 @@ export default {
 
     return {
       articles,
+      collection,
     }
   },
 }
@@ -50,6 +63,7 @@ export default {
   justify-content: center;
   background-color: grey;
   background-blend-mode: darken;
+  object-fit: cover;
 
   color: white;
   text-align: center;
