@@ -7,8 +7,7 @@
     <div class="container">
       <!-- list of collections -->
       <div class="collection-items">
-        <Collection />
-        <Collection />
+        <Collection v-for="(collection, index) in collections" :key="index" />
       </div>
     </div>
   </div>
@@ -20,6 +19,11 @@ import CollectionItem from '@/components/CollectionItem'
 export default {
   components: {
     Collection: CollectionItem,
+  },
+  async asyncData({ $content, params }) {
+    const collections = await $content('collections').fetch()
+
+    return { collections }
   },
 }
 </script>
