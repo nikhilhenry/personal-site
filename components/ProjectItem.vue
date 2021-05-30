@@ -9,9 +9,9 @@
       <div class="technologies">
         <ul class="stacks">
           <li
-            class="stack"
             v-for="(stack, index) in project.stacks"
             :key="index"
+            class="stack"
           >
             {{ stack }}
           </li>
