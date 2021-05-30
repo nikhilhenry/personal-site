@@ -1,11 +1,15 @@
 <template>
   <article class="article">
-    <img
-      src="https://images.unsplash.com/photo-1621675110684-84f7d1914cdc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2148&q=80"
-      class="cover-img"
-    />
+    <nuxt-link to="/articles/test-article">
+      <img
+        src="https://images.unsplash.com/photo-1621675110684-84f7d1914cdc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2148&q=80"
+        class="cover-img"
+      />
+    </nuxt-link>
     <div class="content">
-      <h2 class="title">Golden Gate Bridge</h2>
+      <nuxt-link to="/articles/test-article">
+        <h2 class="title">Golden Gate Bridge</h2>
+      </nuxt-link>
       <section class="stats">
         <span class="date">May 4, 2021</span>
         <span class="duration">
@@ -49,7 +53,7 @@ export default {
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid #dfe4e7;
-  cursor: pointer;
+  margin-top: 0;
 
   .cover-img {
     max-height: 280px;
