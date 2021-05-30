@@ -53,7 +53,7 @@
   }
 
   .content {
-    padding: 1.5rem 0 2rem;
+    padding: 1.5rem 0 1rem;
 
     .title {
       font-size: 1.8rem;
@@ -88,7 +88,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
 
     .btn {
       padding: 1rem 1.5rem 1rem;
