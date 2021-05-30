@@ -58,6 +58,10 @@
     .title {
       font-size: 1.8rem;
     }
+
+    .date {
+      color: #616161;
+    }
   }
 
   .technologies {
