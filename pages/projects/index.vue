@@ -6,7 +6,11 @@
     </div>
     <div class="container">
       <div class="project-items">
-        <Project v-for="(project, index) in projects" :key="index" />
+        <Project
+          v-for="(project, index) in projects"
+          :key="index"
+          :project="project"
+        />
       </div>
     </div>
   </div>
