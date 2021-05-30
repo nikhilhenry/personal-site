@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- @todo wrap link around element -->
     <!-- navbar -->
     <div class="navbar">
       <div class="n-container">
@@ -12,30 +11,42 @@
         </header>
         <ul class="nav-items">
           <div class="navigation">
-            <li
-              class="nav-item"
-              :class="{ 'active-class': activeRoute == 'index' }"
-            >
-              <nuxt-link to="/">home</nuxt-link>
-            </li>
-            <li
-              class="nav-item"
-              :class="{ 'active-class': activeRoute == 'about' }"
-            >
-              <nuxt-link to="/about">about me</nuxt-link>
-            </li>
-            <li
-              class="nav-item"
-              :class="{ 'active-class': activeRoute == 'collections' }"
-            >
-              <nuxt-link to="/collections">collections</nuxt-link>
-            </li>
-            <li
-              class="nav-item"
-              :class="{ 'active-class': activeRoute == 'projects' }"
-            >
-              <nuxt-link to="#">projects</nuxt-link>
-            </li>
+            <!-- home route -->
+            <nuxt-link to="/">
+              <li
+                class="nav-item"
+                :class="{ 'active-class': activeRoute == 'index' }"
+              >
+                home
+              </li>
+            </nuxt-link>
+            <!-- about route -->
+            <nuxt-link to="/about">
+              <li
+                class="nav-item"
+                :class="{ 'active-class': activeRoute == 'about' }"
+              >
+                about me
+              </li>
+            </nuxt-link>
+            <!-- collection route -->
+            <nuxt-link to="/collections">
+              <li
+                class="nav-item"
+                :class="{ 'active-class': activeRoute == 'collections' }"
+              >
+                collections
+              </li>
+            </nuxt-link>
+            <!-- projects route -->
+            <nuxt-link to="#">
+              <li
+                class="nav-item"
+                :class="{ 'active-class': activeRoute == 'projects' }"
+              >
+                projects
+              </li>
+            </nuxt-link>
           </div>
           <div class="social">
             <li class="nav-item">
