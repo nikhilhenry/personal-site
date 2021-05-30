@@ -15,7 +15,11 @@
         </div>
       </div>
       <div class="articles">
-        <Article v-for="(article, index) in articles" :key="index" />
+        <Article
+          v-for="(article, index) in articles"
+          :key="index"
+          :article="article"
+        />
       </div>
     </section>
   </div>
