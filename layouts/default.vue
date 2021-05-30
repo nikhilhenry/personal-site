@@ -39,7 +39,7 @@
               </li>
             </nuxt-link>
             <!-- projects route -->
-            <nuxt-link to="#">
+            <nuxt-link to="/projects">
               <li
                 class="nav-item"
                 :class="{ 'active-class': activeRoute == 'projects' }"
