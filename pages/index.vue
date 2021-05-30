@@ -15,8 +15,7 @@
         </div>
       </div>
       <div class="articles">
-        <Article />
-        <Article />
+        <Article v-for="(article, index) in articles" :key="index" />
       </div>
     </section>
   </div>
@@ -28,6 +27,11 @@ import ArticleItem from '@/components/ArticleItem'
 export default {
   components: {
     Article: ArticleItem,
+  },
+  async asyncData({ $content, params }) {
+    const articles = await $content('articles').fetch()
+
+    return { articles }
   },
 }
 </script>
