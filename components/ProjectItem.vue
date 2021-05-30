@@ -21,6 +21,8 @@
 </template>
 
 <style lang="scss" scoped>
+@import '../assets/styling/stackColors.scss';
+
 .article {
   display: flex;
   flex-direction: column;
@@ -54,7 +56,7 @@
       .stack {
         margin-right: 0.5rem;
         padding: 0.4rem 0.8rem 0.4rem;
-        background-color: #2a9d8f;
+        // background-color: #2a9d8f;
         color: #fff;
         border-radius: 5px;
         text-transform: capitalize;
