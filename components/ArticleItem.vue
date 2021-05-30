@@ -18,7 +18,7 @@
           v-if="!inCollection"
           :to="'/collections/' + article.collection"
           class="series"
-          >#exploration</nuxt-link
+          >#{{ article.collection }}</nuxt-link
         >
       </section>
       <p class="excerpt">
