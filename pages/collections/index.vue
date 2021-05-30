@@ -6,7 +6,7 @@
     </div>
     <div class="container">
       <!-- list of collections -->
-      <div class="collections">
+      <div class="collection-items">
         <Collection />
         <Collection />
       </div>
@@ -47,7 +47,7 @@ export default {
   }
 }
 
-.collections {
+.collection-items {
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
