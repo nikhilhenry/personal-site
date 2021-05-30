@@ -17,13 +17,12 @@ export default {}
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #08aeea;
-  background-image: linear-gradient(0deg, #08aeea 0%, #2af598 100%);
-
   color: white;
   text-align: center;
   padding-top: 2em;
   height: 35vh;
+
+  background-image: linear-gradient(to top, #4facfe 0%, #00f2fe 100%);
 
   .title {
     margin-bottom: 0.5em;
