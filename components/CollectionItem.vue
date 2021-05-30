@@ -1,28 +1,44 @@
 <template>
   <article class="article">
-    <img
-      src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-      class="cover-img"
-    />
+    <img :src="collection.coverImage" class="cover-img" />
     <div class="content">
-      <h2 class="title">Exploration</h2>
+      <h2 class="title">{{ collection.title }}</h2>
       <section class="stats">
-        <span class="date">May 4, 2021</span>
+        <span class="date">{{ createdAt }}</span>
         <span class="count">
           <i class="fas fa-book"></i>
           <span>6 Articles</span>
         </span>
-        <nuxt-link to="collections/exploration" class="link"
+        <nuxt-link
+          :to="'/collections/' + collection.collectionName"
+          class="link"
           >learn more</nuxt-link
         >
       </section>
-      <p class="excerpt">
-        An expedition into a world without limits, a world without bounds. An
-        expedition into a world without limits, a world without bounds.
-      </p>
+      <nuxt-content :document="collection" class="excerpt" />
     </div>
   </article>
 </template>
+
+<script>
+import formatDate from '../mixins/formatDate'
+
+export default {
+  mixins: [formatDate],
+  props: {
+    collection: {
+      type: Object,
+      default: () => {},
+    },
+  },
+  data() {
+    return { raw_createdAt: '' }
+  },
+  created() {
+    this.raw_createdAt = this.collection.createdAt
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 .article {
