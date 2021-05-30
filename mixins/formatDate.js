@@ -5,7 +5,7 @@ export default {
     }
   },
   methods: {
-    formateDate: function (date) {
+    formatDate: (date) => {
       const formattedDate =
         date.toLocaleString('default', { month: 'short' }).toUpperCase() +
         ' ' +
@@ -15,11 +15,9 @@ export default {
       return formattedDate
     },
   },
-  created() {
+  mounted() {
     // format scheduled_for
-    const formattedDate = this.formateDate(
-      new Date(this.objective.scheduled_for)
-    )
+    const formattedDate = this.formatDate(new Date(this.raw_createdAt))
     this.createdAt = formattedDate
   },
 }
