@@ -1,40 +1,58 @@
 <template>
   <article class="article">
-    <img
-      src="https://images.unsplash.com/photo-1504890096598-8377c02363d2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2156&q=80"
-      class="cover-img"
-    />
+    <img :src="project.cover_image" class="cover-img" />
     <div class="content">
       <div class="title-bar">
-        <h2 class="title">Exploration</h2>
-        <span class="date">May 4, 2021</span>
+        <h2 class="title">{{ project.title }}</h2>
+        <span class="date">{{ createdAt }}</span>
       </div>
       <div class="technologies">
         <ul class="stacks">
-          <li class="stack vue">vue</li>
-          <li class="stack firebase">firebase</li>
-          <li class="stack go">go</li>
+          <li
+            class="stack"
+            v-for="(stack, index) in project.stacks"
+            :key="index"
+          >
+            {{ stack }}
+          </li>
         </ul>
       </div>
       <div class="description">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          {{ project.description }}
         </p>
       </div>
       <div class="btn-group">
-        <a href="#" class="btn source"
+        <a :href="project.source_link" target="_blank" class="btn source"
           ><i class="fas fa-code-branch"></i> view source</a
         >
-        <a href="#" class="btn build"
+        <a :href="project.live_link" target="_blank" class="btn build"
           ><i class="fas fa-terminal"></i> view build</a
         >
       </div>
     </div>
   </article>
 </template>
+
+<script>
+import formatDate from '../mixins/formatDate'
+
+export default {
+  mixins: [formatDate],
+  props: {
+    project: {
+      type: Object,
+      default: () => {},
+    },
+  },
+  data() {
+    return { raw_createdAt: '' }
+  },
+  created() {
+    this.raw_createdAt = this.project.createdAt
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 @import '../assets/styling/stackColors.scss';
