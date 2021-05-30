@@ -1,10 +1,8 @@
 <template>
   <div class="collections">
     <div class="hero">
-      <div class="wrapper">
-        <h1 class="title">📝 Collections</h1>
-        <p class="subtitle">Rabit holes of thought...</p>
-      </div>
+      <h1 class="title">📝 Collections</h1>
+      <p class="subtitle">Rabit holes of thought...</p>
     </div>
     <div class="container">
       <!-- list of collections -->
@@ -29,11 +27,9 @@ export default {
 <style lang="scss" scoped>
 .hero {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  // background-color: #8ec5fc;
-  // background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
-  // background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
   background-color: #08aeea;
   background-image: linear-gradient(0deg, #08aeea 0%, #2af598 100%);
 
