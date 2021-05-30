@@ -9,8 +9,8 @@
     <div class="container">
       <!-- list of collections -->
       <div class="articles">
-        <Article />
-        <Article />
+        <Article :in-collection="true" />
+        <Article :in-collection="true" />
       </div>
     </div>
   </div>
@@ -32,7 +32,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .hero {
   display: flex;
   align-items: center;
