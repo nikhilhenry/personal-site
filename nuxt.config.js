@@ -55,9 +55,9 @@ export default {
   hooks: {
     'content:file:beforeInsert': (document) => {
       if (document.extension === '.md' && document.dir === '/articles') {
-        const { time } = require('reading-time')(document.text)
+        const { text } = require('reading-time')(document.text)
 
-        document.readingTime = time
+        document.readingTime = text
       }
     },
   },
