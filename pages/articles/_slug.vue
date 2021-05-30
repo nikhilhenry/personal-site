@@ -42,7 +42,21 @@
 </template>
 
 <script>
-export default {}
+export default {
+  async asyncData({ $content, app, params, error }) {
+    const path = `/${params.slug || 'index'}`
+    const article = await $content('articles', path)
+      .where({})
+      .fetch()
+      .catch(() => {
+        return error({ statusCode: 404, message: 'Article not found' })
+      })
+
+    return {
+      article,
+    }
+  },
+}
 </script>
 
 <style lang="scss">
