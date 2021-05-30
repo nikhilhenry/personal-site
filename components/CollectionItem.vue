@@ -7,7 +7,7 @@
         <span class="date">{{ createdAt }}</span>
         <span class="count">
           <i class="fas fa-book"></i>
-          <span>6 Articles</span>
+          <span>{{ numArticles }} Articles</span>
         </span>
         <nuxt-link
           :to="'/collections/' + collection.collectionName"
@@ -32,10 +32,26 @@ export default {
     },
   },
   data() {
-    return { raw_createdAt: '' }
+    return {
+      raw_createdAt: '',
+      numArticles: 0,
+    }
   },
-  created() {
+  async created() {
     this.raw_createdAt = this.collection.createdAt
+
+    this.numArticles = await this.getArticles()
+  },
+  methods: {
+    async getArticles() {
+      const articles = await this.$content('articles')
+        .where({ collection: this.collection.collectionName })
+        .fetch()
+
+      const numArticles = articles.length
+
+      return numArticles
+    },
   },
 }
 </script>
