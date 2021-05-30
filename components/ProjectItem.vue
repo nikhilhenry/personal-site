@@ -1,25 +1,21 @@
 <template>
   <article class="article">
     <img
-      src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+      src="https://images.unsplash.com/photo-1504890096598-8377c02363d2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2156&q=80"
       class="cover-img"
     />
     <div class="content">
-      <h2 class="title">Exploration</h2>
-      <section class="stats">
+      <div class="title-bar">
+        <h2 class="title">Exploration</h2>
         <span class="date">May 4, 2021</span>
-        <span class="count">
-          <i class="fas fa-book"></i>
-          <span>6 Articles</span>
-        </span>
-        <nuxt-link to="collections/exploration" class="link"
-          >learn more</nuxt-link
-        >
-      </section>
-      <p class="excerpt">
-        An expedition into a world without limits, a world without bounds. An
-        expedition into a world without limits, a world without bounds.
-      </p>
+      </div>
+      <div class="technologies">
+        <ul class="stacks">
+          <li class="stack vue">vue</li>
+          <li class="stack firebase">firebase</li>
+          <li class="stack go">go</li>
+        </ul>
+      </div>
     </div>
   </article>
 </template>
@@ -44,40 +40,24 @@
     .title {
       font-size: 1.8rem;
     }
+  }
 
-    .excerpt {
-      text-align: justify;
-    }
-
-    .stats {
-      margin: 1rem 0 1rem;
-      color: rgba(97, 97, 97, 1);
+  .technologies {
+    margin-top: 1rem;
+    .stacks {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
       display: flex;
       align-items: center;
-
-      .count {
-        margin: 0 1rem 0;
-      }
-      .series {
-        text-decoration: none;
-        color: #3eb0ef;
-      }
-
-      .link {
-        margin-left: auto;
-        text-decoration: none;
-        text-transform: capitalize;
-        color: white;
-        background-color: #08aeea;
-        border: 1px solid #08aeea;
-        padding: 0.4rem 0.9rem 0.4rem;
+      max-width: 100%;
+      .stack {
+        margin-right: 0.5rem;
+        padding: 0.4rem 0.8rem 0.4rem;
+        background-color: #2a9d8f;
+        color: #fff;
         border-radius: 5px;
-        transition: all ease-out 0.2s;
-
-        &:hover {
-          background: transparent;
-          color: #08aeea;
-        }
+        text-transform: capitalize;
       }
     }
   }
