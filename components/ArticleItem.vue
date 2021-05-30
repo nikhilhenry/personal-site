@@ -1,35 +1,28 @@
 <template>
   <article class="article">
-    <nuxt-link to="/articles/test-article">
-      <img
-        src="https://images.unsplash.com/photo-1621675110684-84f7d1914cdc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2148&q=80"
-        class="cover-img"
-      />
+    <nuxt-link :to="'/articles/' + article.slug">
+      <img :src="article.coverImage" class="cover-img" />
     </nuxt-link>
     <div class="content">
       <nuxt-link to="/articles/test-article">
-        <h2 class="title">Golden Gate Bridge</h2>
+        <h2 class="title">{{ article.title }}</h2>
       </nuxt-link>
       <section class="stats">
-        <span class="date">May 4, 2021</span>
+        <span class="date">{{ article.createdAt }}</span>
         <span class="duration">
           <i class="far fa-clock"></i>
+          <!-- @todo add read time -->
           <span>5 min read</span>
         </span>
         <nuxt-link
           v-if="!inCollection"
-          to="/collections/exploration"
+          :to="'/collections/' + article.collection"
           class="series"
           >#exploration</nuxt-link
         >
       </section>
       <p class="excerpt">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt...
+        {{ article.description }}
       </p>
     </div>
   </article>
@@ -39,6 +32,10 @@
 export default {
   props: {
     inCollection: Boolean,
+    article: {
+      type: Object,
+      default: () => {},
+    },
   },
 }
 </script>
