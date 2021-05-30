@@ -76,7 +76,7 @@
       .stack {
         margin-right: 0.5rem;
         padding: 0.4rem 0.8rem 0.4rem;
-        // background-color: #2a9d8f;
+        background-color: #cbb2fe;
         color: #fff;
         border-radius: 5px;
         text-transform: capitalize;
@@ -98,17 +98,18 @@
       font-size: 16px;
       width: 95%;
       text-align: center;
+      font-weight: bold;
       i {
         margin-right: 0.5rem;
       }
     }
     // find a better color
     .source {
-      background-color: #0077b6;
+      background-color: #4facfe;
       margin-right: 15px;
     }
     .build {
-      background-color: #4facfe;
+      background-color: #8187dc;
     }
   }
 }
