@@ -54,7 +54,7 @@ export default {
   modules: ['@nuxt/content'],
   hooks: {
     'content:file:beforeInsert': (document) => {
-      if (document.extension === '.md') {
+      if (document.extension === '.md' && document.dir === '/articles') {
         const { time } = require('reading-time')(document.text)
 
         document.readingTime = time
