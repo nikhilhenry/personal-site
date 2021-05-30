@@ -1,48 +1,34 @@
 <template>
   <div class="article">
     <div class="container">
-      <img
-        src="https://images.unsplash.com/photo-1621675110684-84f7d1914cdc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2148&q=80"
-        class="article-img"
-      />
+      <img :src="article.coverImage" class="article-img" />
       <section class="info">
-        <h1 class="title">Golden Gate Bridge</h1>
+        <h1 class="title">{{ article.title }}</h1>
         <section class="stats">
-          <span class="date">May 4, 2021</span>
+          <span class="date">{{ createdAt }}</span>
           <span class="duration">
             <i class="far fa-clock"></i>
+            <!-- @todo add read time -->
             <span>5 min read</span>
           </span>
-          <nuxt-link to="#" class="series">#exploration</nuxt-link>
+          <nuxt-link :to="'/collections/' + article.collection" class="series"
+            >#{{ article.collection }}</nuxt-link
+          >
         </section>
         <h3 class="sub-title">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          {{ article.description }}
         </h3>
       </section>
-      <section class="content">
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-        explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-        voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
-        quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-        eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-        voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam
-        corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-        Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
-        quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
-        voluptas nulla pariatur?
-      </section>
+      <nuxt-content :document="article" class="content" />
     </div>
   </div>
 </template>
 
 <script>
+import formatDate from '@/mixins/formatDate'
+
 export default {
+  mixins: [formatDate],
   async asyncData({ $content, app, params, error }) {
     const path = `/${params.slug || 'index'}`
     const article = await $content('articles', path)
@@ -55,6 +41,12 @@ export default {
     return {
       article,
     }
+  },
+  data() {
+    return { raw_createdAt: '' }
+  },
+  created() {
+    this.raw_createdAt = this.article.createdAt
   },
 }
 </script>
@@ -100,6 +92,18 @@ export default {
 
   .content {
     padding: 2rem 0 1rem;
+  }
+}
+
+.nuxt-content {
+  h1 {
+    margin: 1rem 0 1rem;
+  }
+
+  p {
+    line-height: 24px;
+    font-size: 18px;
+    margin: 24px 0;
   }
 }
 </style>
