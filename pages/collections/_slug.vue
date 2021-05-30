@@ -9,8 +9,12 @@
     <div class="container">
       <!-- list of collections -->
       <div class="articles">
-        <Article :in-collection="true" />
-        <Article :in-collection="true" />
+        <Article
+          v-for="(article, index) in articles"
+          :key="index"
+          :in-collection="true"
+          :article="article"
+        />
       </div>
     </div>
   </div>
@@ -23,10 +27,17 @@ export default {
   components: {
     Article: ArticleItem,
   },
-  data() {
+  async asyncData({ $content, params, error }) {
+    const path = `/${params.slug || 'index'}`
+    const articles = await $content('articles')
+      .where({ collection: path })
+      .fetch()
+      .catch(() => {
+        return error({ statusCode: 404, message: 'Article not found' })
+      })
+
     return {
-      image:
-        'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+      articles,
     }
   },
 }
