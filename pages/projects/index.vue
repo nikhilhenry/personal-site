@@ -6,8 +6,7 @@
     </div>
     <div class="container">
       <div class="project-items">
-        <Project />
-        <Project />
+        <Project v-for="(project, index) in projects" :key="index" />
       </div>
     </div>
   </div>
@@ -18,6 +17,11 @@ import ProjectItem from '@/components/ProjectItem'
 export default {
   components: {
     Project: ProjectItem,
+  },
+  async asyncData({ $content, params }) {
+    const projects = await $content('projects').fetch()
+
+    return { projects }
   },
 }
 </script>
