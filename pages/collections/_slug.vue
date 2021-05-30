@@ -61,9 +61,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: grey;
-  background-blend-mode: darken;
-  object-fit: cover;
+  background-position: center;
 
   color: white;
   text-align: center;
