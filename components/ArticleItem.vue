@@ -14,9 +14,9 @@
             <span>5 min read</span>
           </span>
           <nuxt-link
+            v-if="!inCollection"
             to="/collections/exploration"
             class="series"
-            v-if="!inCollection"
             >#exploration</nuxt-link
           >
         </section>
