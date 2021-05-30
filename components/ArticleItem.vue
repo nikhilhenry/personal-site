@@ -12,7 +12,7 @@
         <span class="duration">
           <i class="far fa-clock"></i>
           <!-- @todo add read time -->
-          <span>5 min read</span>
+          <span>{{ article.readingTime }}</span>
         </span>
         <nuxt-link
           v-if="!inCollection"
