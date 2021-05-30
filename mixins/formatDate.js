@@ -7,7 +7,7 @@ export default {
   methods: {
     formatDate: (date) => {
       const formattedDate =
-        date.toLocaleString('default', { month: 'short' }).toUpperCase() +
+        date.toLocaleString('default', { month: 'short' }) +
         ' ' +
         new Date(date).getDate() +
         ' ' +
