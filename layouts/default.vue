@@ -98,6 +98,11 @@ export default {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 $border-color: rgba(156, 163, 175, 0.2);
 
 .navbar {
