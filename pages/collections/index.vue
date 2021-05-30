@@ -7,7 +7,11 @@
     <div class="container">
       <!-- list of collections -->
       <div class="collection-items">
-        <Collection v-for="(collection, index) in collections" :key="index" />
+        <Collection
+          v-for="(collection, index) in collections"
+          :key="index"
+          :collection="collection"
+        />
       </div>
     </div>
   </div>
