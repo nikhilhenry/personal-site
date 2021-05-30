@@ -12,6 +12,7 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
+    "@nuxt/content": "^1.14.0",
     "nuxt": "^2.13.0"
   },
   "devDependencies": {
