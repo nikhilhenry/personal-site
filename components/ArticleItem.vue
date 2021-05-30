@@ -8,7 +8,7 @@
         <h2 class="title">{{ article.title }}</h2>
       </nuxt-link>
       <section class="stats">
-        <span class="date">{{ article.createdAt }}</span>
+        <span class="date">{{ createdAt }}</span>
         <span class="duration">
           <i class="far fa-clock"></i>
           <!-- @todo add read time -->
@@ -29,13 +29,22 @@
 </template>
 
 <script>
+import formatDate from '../mixins/formatDate'
+
 export default {
+  mixins: [formatDate],
   props: {
     inCollection: Boolean,
     article: {
       type: Object,
       default: () => {},
     },
+  },
+  data() {
+    return { raw_createdAt: '' }
+  },
+  created() {
+    this.raw_createdAt = this.article.createdAt
   },
 }
 </script>
