@@ -13,7 +13,8 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.14.0",
-    "nuxt": "^2.13.0"
+    "nuxt": "^2.13.0",
+    "reading-time": "^1.3.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.0.0",
