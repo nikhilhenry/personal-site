@@ -10,7 +10,7 @@ export default {
         date.toLocaleString('default', { month: 'short' }) +
         ' ' +
         new Date(date).getDate() +
-        ' ' +
+        ', ' +
         new Date(date).getFullYear()
       return formattedDate
     },
