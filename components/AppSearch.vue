@@ -2,14 +2,21 @@
   <div class="app-search">
     <div id="card">
       <div id="search-wrapper">
-        <input
-          v-model="searchQuery"
-          class="input is-medium"
-          type="text"
-          placeholder="Type to search nikhilhenry.me"
-        />
+        <div class="control is-medium" :class="{ 'is-loading': searching }">
+          <input
+            v-model="searchQuery"
+            class="input is-medium"
+            type="text"
+            placeholder="Type to search nikhilhenry.me"
+          />
+        </div>
       </div>
-      <div id="text">
+      <ul v-if="results.length" class="results">
+        <li v-for="(result, index) in results" :key="index">
+          <ResultItem :result="result" />
+        </li>
+      </ul>
+      <div v-else id="text">
         <i class="fas fa-search"></i>
         <h2>Search articles from this blog</h2>
       </div>
@@ -37,7 +44,7 @@ export default {
       this.searching = true
       this.results = await this.$content({ deep: true })
         .sortBy('position', 'asc')
-        .only(['title', 'slug', 'category', 'to'])
+        .only(['title', 'slug', 'createdAt', 'to'])
         .limit(12)
         .search(q)
         .fetch()
@@ -56,6 +63,10 @@ export default {
   border-radius: 5px;
   width: 80vw;
   max-width: 800px;
+
+  .results {
+    margin-top: 2rem;
+  }
 
   #text {
     color: #9e9e9e;
