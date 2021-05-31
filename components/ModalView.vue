@@ -24,6 +24,8 @@ export default {
     setModalStatus() {
       this.isActive = !this.isActive
       this.$emit('status', this.isActive)
+      //  send back if not active
+      if (!this.isActive) this.$router.go(-1)
     },
   },
 }
