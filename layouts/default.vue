@@ -1,11 +1,16 @@
 <template>
   <div>
+    <!-- modal view -->
+    <ModalView
+      v-if="isSearchActive"
+      @status="isSearchActive = !isSearchActive"
+    ></ModalView>
     <!-- navbar -->
     <div class="navbar">
       <div class="n-container">
         <header class="navbar-header">
           <div class="title">Nikhil Henry</div>
-          <div class="icon">
+          <div class="icon" @click="isSearchActive = !isSearchActive">
             <i class="fas fa-search"></i>
           </div>
         </header>
@@ -93,6 +98,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      isSearchActive: false,
+    }
+  },
   computed: {
     activeRoute() {
       return this.$route.name
