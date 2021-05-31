@@ -60,7 +60,7 @@ export default {
 #card {
   background-color: #fff;
   padding: 2rem;
-  border-radius: 5px;
+  border-radius: 10px;
   width: 80vw;
   max-width: 800px;
 
