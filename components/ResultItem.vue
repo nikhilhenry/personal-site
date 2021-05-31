@@ -1,7 +1,9 @@
 <template>
   <div class="result">
-    <h2 class="title">{{ result.title }}</h2>
-    <span class="date">{{ createdAt }}</span>
+    <NuxtLink :to="result.path">
+      <h2 class="title">{{ result.title }}</h2>
+      <span class="date">{{ createdAt }}</span>
+    </NuxtLink>
   </div>
 </template>
 
