@@ -9,7 +9,7 @@
       <div class="n-container">
         <header class="navbar-header">
           <div class="title">Nikhil Henry</div>
-          <div class="icon" @click="isSearchActive = !isSearchActive">
+          <div class="icon" @click="setSearchActive">
             <i class="fas fa-search"></i>
           </div>
         </header>
@@ -97,14 +97,18 @@
 
 <script>
 export default {
-  data() {
-    return {
-      isSearchActive: false,
-    }
-  },
   computed: {
     activeRoute() {
       return this.$route.name
+    },
+    isSearchActive() {
+      if (this.$route.query.search) return true
+      else return false
+    },
+  },
+  methods: {
+    setSearchActive() {
+      this.$router.push({ query: { search: 'true' } })
     },
   },
 }
