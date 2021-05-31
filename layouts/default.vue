@@ -1,10 +1,9 @@
 <template>
   <div>
     <!-- modal view -->
-    <ModalView
-      v-if="isSearchActive"
-      @status="isSearchActive = !isSearchActive"
-    ></ModalView>
+    <ModalView v-if="isSearchActive" @status="isSearchActive = !isSearchActive">
+      <AppSearch />
+    </ModalView>
     <!-- navbar -->
     <div class="navbar">
       <div class="n-container">
