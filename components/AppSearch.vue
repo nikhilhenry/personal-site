@@ -1,21 +1,32 @@
 <template>
-  <div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title">Modal title</p>
-        <button class="delete" aria-label="close"></button>
-      </header>
-      <section class="modal-card-body">
-        <!-- Content ... -->
-      </section>
-      <footer class="modal-card-foot">
-        <button class="button is-success">Save changes</button>
-        <button class="button">Cancel</button>
-      </footer>
+  <div class="app-search">
+    <div class="card">
+      <div class="text">
+        <i class="fas fa-search"></i>
+        <h2>Search articles from this blog</h2>
+      </div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-@import '~bulma';
+.card {
+  background-color: #fff;
+  padding: 1rem 2rem 1rem;
+  border-radius: 5px;
+
+  .text {
+    color: #9e9e9e;
+    display: flex;
+    align-items: center;
+    i {
+      font-size: 2rem;
+      margin-right: 20px;
+    }
+
+    h2 {
+      font-weight: 400 !important;
+    }
+  }
+}
 </style>
