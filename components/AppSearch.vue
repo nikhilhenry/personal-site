@@ -42,7 +42,7 @@ export default {
         return
       }
       this.searching = true
-      this.results = await this.$content({ deep: true })
+      this.results = await this.$content('articles')
         .sortBy('position', 'asc')
         .only(['title', 'slug', 'createdAt', 'to'])
         .limit(12)
