@@ -33,6 +33,10 @@ export default {
   border: 1px solid #e5e7eb;
   border-radius: 5px;
   margin-top: 1rem;
+  &:hover {
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000,
+      0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
 
   .title {
     color: #424242;
