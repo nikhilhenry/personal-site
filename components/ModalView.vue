@@ -38,6 +38,10 @@ export default {
   overflow: visible;
 }
 
+.modal-background {
+  background-color: rgba(10, 10, 10, 0.4);
+}
+
 @media only screen and (min-width: 1024px) {
   .modal-content {
     width: auto;
