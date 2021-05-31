@@ -3,6 +3,7 @@
     <div id="card">
       <div id="search-wrapper">
         <input
+          v-model="searchQuery"
           class="input is-medium"
           type="text"
           placeholder="Type to search nikhilhenry.me"
@@ -15,6 +16,36 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'AppSearch',
+  data() {
+    return {
+      searchQuery: '',
+      searching: false,
+      results: [],
+    }
+  },
+  watch: {
+    async searchQuery(q) {
+      if (!q) {
+        this.searching = false
+        this.results = []
+        return
+      }
+      this.searching = true
+      this.results = await this.$content({ deep: true })
+        .sortBy('position', 'asc')
+        .only(['title', 'slug', 'category', 'to'])
+        .limit(12)
+        .search(q)
+        .fetch()
+      this.searching = false
+    },
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 @import '~bulma';
