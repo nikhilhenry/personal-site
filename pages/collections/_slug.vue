@@ -53,6 +53,25 @@ export default {
       collection,
     }
   },
+  head() {
+    return {
+      title: this.collection.title,
+      titleTemplate: '%s - Nikhil Henry',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.collection.subtitle,
+        },
+        {
+          hid: 'image',
+          name: 'og:image',
+          property: 'og:image',
+          content: this.collection.coverImage,
+        },
+      ],
+    }
+  },
 }
 </script>
 
