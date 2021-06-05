@@ -2,7 +2,7 @@
   <div class="container">
     <h2 class="is-size-4">Send me an email</h2>
 
-    <form class="form" @submit.prevent>
+    <form data-netlify="true" name="contact" class="form" method="POST">
       <!-- name -->
       <div class="field">
         <label class="label">Name</label>
