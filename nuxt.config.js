@@ -24,6 +24,13 @@ export default {
         content:
           'Nikhil Henry is an IBDP student and tech enthusiast skilled at exploring new frameworks and applying skills of problem solving and leadership to craft meaningful user experiences.',
       },
+      {
+        hid: 'image',
+        name: 'og:image',
+        property: 'og:image',
+        content: '/blog-icon.png',
+        // @todo maybe update to firebase link if not displaying
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     script: [{ src: 'https://kit.fontawesome.com/a40ef71e31.js' }],
