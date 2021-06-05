@@ -2,7 +2,13 @@
   <div class="container">
     <h2 class="is-size-4">Send me an email</h2>
 
-    <form data-netlify="true" name="contact" class="form" method="POST">
+    <form
+      data-netlify="true"
+      name="contact"
+      class="form"
+      method="POST"
+      data-netlify-recaptcha="true"
+    >
       <!-- name -->
       <div class="field">
         <label class="label">Name</label>
@@ -61,9 +67,13 @@
         </div>
       </div>
 
+      <!-- recaptcha -->
+      <div data-netlify-recaptcha="true"></div>
+
+      <!-- send button -->
       <div class="field">
         <div class="control has-text-centered">
-          <button class="button is-link">Submit</button>
+          <button class="button is-link">Send</button>
         </div>
       </div>
     </form>
