@@ -18,7 +18,8 @@
       </ul>
       <div v-else id="text">
         <i class="fas fa-search"></i>
-        <h2>Search articles from this blog</h2>
+        <h2 v-if="noResults">No posts found</h2>
+        <h2 v-else>Search articles from this blog</h2>
       </div>
     </div>
   </div>
@@ -32,6 +33,7 @@ export default {
       searchQuery: '',
       searching: false,
       results: [],
+      noResults: false,
     }
   },
   watch: {
@@ -49,6 +51,8 @@ export default {
         .search(q)
         .fetch()
       this.searching = false
+      if (!this.results.length) this.noResults = true
+      else this.noResults = false
     },
   },
 }
