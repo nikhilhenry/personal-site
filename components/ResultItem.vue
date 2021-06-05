@@ -1,5 +1,5 @@
 <template>
-  <div class="result" v-if="result">
+  <div v-if="result" class="result">
     <NuxtLink :to="result.path">
       <h2 class="title">{{ result.title }}</h2>
       <span class="date">{{ createdAt }}</span>
