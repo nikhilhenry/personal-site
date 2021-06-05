@@ -21,7 +21,8 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content:
+          'Nikhil Henry is an IBDP student and tech enthusiast skilled at exploring new frameworks and applying skills of problem solving and leadership to craft meaningful user experiences.',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
