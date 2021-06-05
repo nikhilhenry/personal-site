@@ -7,7 +7,7 @@
       <div class="field">
         <label class="label">Name</label>
         <div class="control">
-          <input class="input" type="text" placeholder="Text input" />
+          <input class="input" type="text" placeholder="Your name" />
         </div>
       </div>
 
@@ -18,7 +18,20 @@
           <input
             class="input"
             type="email"
-            placeholder="Email input"
+            placeholder="hello@example.com"
+            value=""
+          />
+        </div>
+      </div>
+
+      <!-- subject -->
+      <div class="field">
+        <label class="label">Subject</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Write something"
             value=""
           />
         </div>
@@ -44,7 +57,7 @@
       <div class="field">
         <label class="label">Message</label>
         <div class="control">
-          <textarea class="textarea" placeholder="Textarea"></textarea>
+          <textarea class="textarea" placeholder="Your message"></textarea>
         </div>
       </div>
 
