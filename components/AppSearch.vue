@@ -46,10 +46,12 @@ export default {
       this.searching = true
       this.results = await this.$content('articles')
         .sortBy('position', 'asc')
-        .only(['title', 'slug', 'createdAt', 'to'])
+        .only(['title', 'slug', 'createdAt', 'path'])
         .limit(12)
         .search(q)
         .fetch()
+
+      console.log(this.results)
       this.searching = false
       if (!this.results.length) this.noResults = true
       else this.noResults = false
