@@ -50,8 +50,6 @@ export default {
         .limit(12)
         .search(q)
         .fetch()
-
-      console.log(this.results)
       this.searching = false
       if (!this.results.length) this.noResults = true
       else this.noResults = false
