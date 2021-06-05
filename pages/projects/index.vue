@@ -27,6 +27,16 @@ export default {
 
     return { projects }
   },
+  head: {
+    title: 'Collections - Nikhil Henry',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Builds and concepts by Nikhil Henry.',
+      },
+    ],
+  },
 }
 </script>
 
