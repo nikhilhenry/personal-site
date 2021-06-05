@@ -87,7 +87,9 @@
             target="_"
             ><i class="fab fa-linkedin"></i
           ></a>
-          <nuxt-link to="contact"><i class="fas fa-paper-plane"></i></nuxt-link>
+          <nuxt-link to="/contact"
+            ><i class="fas fa-paper-plane"></i
+          ></nuxt-link>
         </div>
       </div>
       <span class="copy">&copy; 2021 Nikhil Henry</span>
