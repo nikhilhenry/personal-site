@@ -48,6 +48,25 @@ export default {
   created() {
     this.raw_createdAt = this.article.createdAt
   },
+  head() {
+    return {
+      title: this.article.title,
+      titleTemplate: '%s - Nikhil Henry',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.article.description,
+        },
+        {
+          hid: 'image',
+          name: 'og:image',
+          property: 'og:image',
+          content: this.article.coverImage,
+        },
+      ],
+    }
+  },
 }
 </script>
 
