@@ -66,9 +66,9 @@
               ></a>
             </li>
             <li class="nav-item">
-              <a href="https://www.instagram.com/_nikhilhenry_/"
-                ><i class="fab fa-instagram"></i
-              ></a>
+              <nuxt-link to="/contact"
+                ><i class="fas fa-paper-plane"></i
+              ></nuxt-link>
             </li>
           </div>
         </ul>
