@@ -28,7 +28,7 @@ export default {
     return { projects }
   },
   head: {
-    title: 'Collections - Nikhil Henry',
+    title: 'Projects - Nikhil Henry',
     meta: [
       {
         hid: 'description',
