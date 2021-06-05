@@ -29,6 +29,9 @@ export default {
 
     return { collections }
   },
+  head: {
+    title: 'Collections - Nikhil Henry',
+  },
 }
 </script>
 
