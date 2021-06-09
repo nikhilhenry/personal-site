@@ -77,4 +77,15 @@ export default {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 3rem;
 }
+
+/* TABLETS PORTRAIT */
+@media only screen and (max-width: 820px) {
+  .meta {
+    flex-direction: column;
+    align-items: start;
+    .avatar img {
+      height: 100px !important;
+    }
+  }
+}
 </style>
