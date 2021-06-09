@@ -77,8 +77,9 @@ export default {
       font-size: 1.8rem;
     }
 
-    .excerpt {
+    .nuxt-content p {
       text-align: justify;
+      font-size: 1rem !important;
     }
 
     .stats {
