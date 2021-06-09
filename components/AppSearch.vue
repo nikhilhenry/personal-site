@@ -90,4 +90,12 @@ export default {
     }
   }
 }
+
+/* TABLETS PORTRAIT */
+@media only screen and (max-width: 820px) {
+  #card {
+    width: 95%;
+    margin: 0 auto 0;
+  }
+}
 </style>
