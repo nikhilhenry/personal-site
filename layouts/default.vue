@@ -252,4 +252,15 @@ $border-color: rgba(156, 163, 175, 0.2);
     font-size: 1.1rem;
   }
 }
+
+/* TABLETS PORTRAIT */
+@media only screen and (max-width: 820px) {
+  html {
+    font-size: 12px;
+  }
+
+  .social {
+    display: none !important;
+  }
+}
 </style>
