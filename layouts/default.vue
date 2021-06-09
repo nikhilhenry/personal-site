@@ -262,5 +262,11 @@ $border-color: rgba(156, 163, 175, 0.2);
   .social {
     display: none !important;
   }
+
+  .n-container {
+    width: 100% !important;
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
 }
 </style>
