@@ -94,4 +94,11 @@ h2 {
 .field {
   margin-bottom: 1.5rem !important;
 }
+
+/* TABLETS PORTRAIT */
+@media only screen and (max-width: 820px) {
+  .container {
+    padding: 1.5rem;
+  }
+}
 </style>
