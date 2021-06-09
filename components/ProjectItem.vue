@@ -113,7 +113,7 @@ export default {
       text-transform: uppercase;
       color: white;
       border-radius: 5px;
-      font-size: 16px;
+      font-size: 1rem;
       width: 95%;
       text-align: center;
       font-weight: bold;
