@@ -30,7 +30,7 @@
                 class="nav-item"
                 :class="{ 'active-class': activeRoute == 'about' }"
               >
-                about me
+                about
               </li>
             </nuxt-link>
             <!-- collection route -->
