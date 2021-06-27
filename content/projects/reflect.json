@@ -1,0 +1,7 @@
+{
+  "title": "Sunny Whale Reflect",
+  "cover_image": "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+  "stacks": ["vue", "express", "mongoDB", "Unsplash API"],
+  "description": "Bootstrapped mental wellness startup for the student community and teens during the 2020 pandemic. Established CI/CD pipeline using GitHub Actions. Deployed Docker containerised application on PaaS.",
+  "live_link": "https://reflect.sunnywhale.in"
+}
