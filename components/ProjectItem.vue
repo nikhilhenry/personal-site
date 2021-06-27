@@ -23,10 +23,18 @@
         </p>
       </div>
       <div class="btn-group">
-        <a :href="project.source_link" target="_blank" class="btn source"
+        <a
+          v-if="project.source_link"
+          :href="project.source_link"
+          target="_blank"
+          class="btn source"
           ><i class="fas fa-code-branch"></i> view source</a
         >
-        <a :href="project.live_link" target="_blank" class="btn build"
+        <a
+          v-if="project.live_link"
+          :href="project.live_link"
+          target="_blank"
+          class="btn build"
           ><i class="fas fa-terminal"></i> view build</a
         >
       </div>
