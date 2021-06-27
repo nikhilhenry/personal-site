@@ -4,5 +4,6 @@
   "stacks": ["Nuxt SSR", "AWS", "Ghost Blog", "Heroku"],
   "description": "Initiated a student-led organisation to promote information and perspectives of students. Independently designed and implemented site Built using NuxtJS and Ghost Blogging Platform. Deployed system to AWS E2C. Received honour from UNODC for an outstanding design system ",
   "source_link": "https://github.com/nikhilhenry/thecovid19survivalguide",
-  "live_link": "http://unavoca.lsb.edu.in"
+  "live_link": "http://unavoca.lsb.edu.in",
+  "createdAt": "04/12/2020"
 }

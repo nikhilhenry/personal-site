@@ -4,5 +4,6 @@
   "stacks": ["vue", "firebase", "Netlify"],
   "description": "Why settle for boring plastic cards telling you where your school house currently stands? Or even worse, wait till the end of the competiton? When you can get live updates of who's on top. A fun little project I built for my school during my Presidential term in 2020-2021.",
   "source_link": "https://github.com/nikhilhenry/lsb-leaderboard",
-  "live_link": "https://lsb-leaderboard.netlify.app/#/"
+  "live_link": "https://lsb-leaderboard.netlify.app/#/",
+  "createdAt": "11/28/2020"
 }
