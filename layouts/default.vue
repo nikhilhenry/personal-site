@@ -117,6 +117,9 @@ export default {
 </script>
 
 <style lang="scss">
+// content scss
+@import '../assets/styling/content.scss';
+
 *,
 *::before,
 *::after {
