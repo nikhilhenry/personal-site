@@ -1,0 +1,8 @@
+{
+  "title": "LSB Leaderboard",
+  "cover_image": "https://images.unsplash.com/photo-1581431564030-e27d0a9201ad?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+  "stacks": ["vue", "firebase", "Netlify"],
+  "description": "Why settle for boring plastic cards telling you where your school house currently stands? Or even worse, wait till the end of the competiton? When you can get live updates of who's on top. A fun little project I built for my school during my Presidential term in 2020-2021.",
+  "source_link": "https://github.com/nikhilhenry/lsb-leaderboard",
+  "live_link": "https://lsb-leaderboard.netlify.app/#/"
+}
