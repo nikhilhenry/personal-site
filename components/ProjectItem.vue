@@ -69,7 +69,6 @@ export default {
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid #dfe4e7;
-  cursor: pointer;
 
   .cover-img {
     max-height: 280px;
