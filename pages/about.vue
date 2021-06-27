@@ -30,7 +30,7 @@ export default {
 ::v-deep .nuxt-content {
   h1 {
     margin: 1rem 0 1rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   p {
