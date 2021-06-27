@@ -113,16 +113,4 @@ export default {
     padding: 2rem 0 1rem;
   }
 }
-
-.nuxt-content {
-  h1 {
-    margin: 1rem 0 1rem;
-  }
-
-  p {
-    line-height: 24px;
-    font-size: 18px;
-    margin: 24px 0;
-  }
-}
 </style>
