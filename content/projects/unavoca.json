@@ -1,0 +1,8 @@
+{
+  "title": "Unavoca",
+  "cover_image": "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+  "stacks": ["Nuxt SSR", "AWS", "Ghost Blog", "Heroku"],
+  "description": "Initiated a student-led organisation to promote information and perspectives of students. Independently designed and implemented site Built using NuxtJS and Ghost Blogging Platform. Deployed system to AWS E2C. Received honour from UNODC for an outstanding design system ",
+  "source_link": "https://github.com/nikhilhenry/thecovid19survivalguide",
+  "live_link": "http://unavoca.lsb.edu.in"
+}
