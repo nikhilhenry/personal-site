@@ -9,7 +9,7 @@
           <span class="duration">
             <i class="far fa-clock"></i>
             <!-- @todo add read time -->
-            <span>5 min read</span>
+            <span>{{ article.readingTime }}</span>
           </span>
           <nuxt-link :to="'/collections/' + article.collection" class="series"
             >#{{ article.collection }}</nuxt-link
