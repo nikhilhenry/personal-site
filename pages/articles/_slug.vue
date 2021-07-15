@@ -86,11 +86,11 @@ export default {
     border-bottom: 1px solid #dfe4e7;
     .title {
       font-size: 2.5em;
-      margin-bottom: 1rem;
+      margin: 1rem 0;
     }
 
     .stats {
-      margin: 1rem 0 1.5rem;
+      margin: 1.5rem 0 1.5rem;
       color: rgba(97, 97, 97, 1);
       font-size: 20px;
 
@@ -110,7 +110,7 @@ export default {
   }
 
   .content {
-    padding: 2rem 0 1rem;
+    padding: 1rem 0 1rem;
   }
 }
 </style>
