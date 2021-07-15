@@ -26,4 +26,6 @@ In line with my initial goal of free hosting, my requirements were very specific
 
 The site is currently live at [nikhilhenry.me](https://nikhilhenry.me). I hope to continuously update content both on the site and my [Dev.to](dev.to) page on anything regarding tech or a few reflections on the various hats I wear during my fantastical journey of life!
 
+---
+
 Photo by [Christopher Gower](https://unsplash.com/@cgower?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/website?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
