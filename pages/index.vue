@@ -3,7 +3,7 @@
     <section class="author-card">
       <div class="meta">
         <div class="avatar">
-          <img src="../assets/avatar.png" />
+          <img src="../assets/avatar.jpeg" />
         </div>
         <div class="info">
           <h2 class="name">Nikhil Henry</h2>
@@ -60,7 +60,7 @@ export default {
       height: 100%;
       width: auto;
       border-radius: 35%;
-      object-fit: cover;
+      object-fit: fill;
     }
   }
   .name {
