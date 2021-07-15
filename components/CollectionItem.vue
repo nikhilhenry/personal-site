@@ -7,7 +7,7 @@
         <span class="date">{{ createdAt }}</span>
         <span class="count">
           <i class="fas fa-book"></i>
-          <span>{{ numArticles }} Articles</span>
+          <span>{{ numArticles }} Article(s)</span>
         </span>
         <nuxt-link
           :to="'/collections/' + collection.collectionName"
