@@ -1,6 +1,6 @@
 {
   "title": "Laser Defender",
-  "cover_image": "https://images.unsplash.com/photo-1610483155766-e50e9774ad7f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3354&q=80",
+  "cover_image": "https://firebasestorage.googleapis.com/v0/b/nikhil-image-bucket.appspot.com/o/laser-defender-screenshot.png?alt=media&token=9a733149-1196-4f00-bb32-dc3faa2e7594",
   "stacks": ["Unity 3D"],
   "description": "A top down 2D space shooter built with Unity 3D for the web and desktop. Uses prefabs and path finding.",
   "live_link": "https://nikhil-henry.itch.io/laser-defender",
