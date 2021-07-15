@@ -7,7 +7,7 @@ I'm **Nikhil Henry** an IBDP student and tech enthusiast. Welcome to my little p
 ## Presently
 
 1. Pursuing the IBDP program with a focus on the sciences and business.
-2. Developing my mental health SAAS product [Sunny Whale](https://reflect.sunnywhale.in).
+2. Developing my mental health SaaS product [Sunny Whale](https://reflect.sunnywhale.in).
 3. Navigating the complex realm of Decentralised Applications.
 
 ## Speciliasations
