@@ -22,10 +22,6 @@ A good framework, yes essential to a good developer experience, but a great CMS 
 
 In line with my initial goal of free hosting, my requirements were very specific and niche: auto-deploy, custom domains and server-side endpoints. To my surprise, [Vercel](https://vercel.com/) went above and beyond in satisfying these requirements. Although quite common for those familiar with Next, Vercel supports a host of frameworks for serverless hosting. I was no longer bound by a time-specific docker container or losing my API endpoints for caching. Vercel was definitely the best fit and integrated seamlessly with my git setup and would instantly build, notify and deploy the site. Integrating with Nuxt was instant, however, a neat little community package,[@nuxt/vercel-builder](https://github.com/nuxt/vercel-builder), handles all the configuration so you can just on writing code.
 
-# Conclusion
-
-The site is currently live at [nikhilhenry.me](https://nikhilhenry.me). I hope to continuously update content both on the site and my [Dev.to](dev.to) page on anything regarding tech or a few reflections on the various hats I wear during my fantastical journey of life!
-
 ---
 
 Photo by [Christopher Gower](https://unsplash.com/@cgower?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/website?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
