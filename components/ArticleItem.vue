@@ -4,14 +4,13 @@
       <img :src="article.coverImage" class="cover-img" />
     </nuxt-link>
     <div class="content">
-      <nuxt-link to="/articles/test-article">
+      <nuxt-link :to="'/articles/' + article.slug">
         <h2 class="title">{{ article.title }}</h2>
       </nuxt-link>
       <section class="stats">
         <span class="date">{{ createdAt }}</span>
         <span class="duration">
           <i class="far fa-clock"></i>
-          <!-- @todo add read time -->
           <span>{{ article.readingTime }}</span>
         </span>
         <nuxt-link
@@ -73,6 +72,9 @@ export default {
 
     .title {
       font-size: 1.8rem;
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     .stats {
