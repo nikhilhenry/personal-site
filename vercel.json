@@ -14,7 +14,7 @@
         "generateStaticRoutes" : true
       }
     }
-  ]
+  ],
   "functions":{
     "api/**/*.py": {
       "excludeFiles": "public/**"
