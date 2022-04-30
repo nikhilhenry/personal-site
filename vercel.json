@@ -1,12 +1,22 @@
 {
+  "routes": [
+    {
+      "src": "/api/hello",
+      "dest": "/api/hello.py"
+    }
+  ],
   "builds": [
     {
       "src": "nuxt.config.js",
       "use": "@nuxtjs/vercel-builder",
       "config": {
-        "serverFiles": [".nuxt/content/**", "content/**","api/**"],
+        "serverFiles": [".nuxt/content/**", "content/**"],
         "generateStaticRoutes" : true
       }
+    },
+    {
+      "src": "api/**/*.py",
+      "use": "@vercel/python"
     }
   ]
 }
