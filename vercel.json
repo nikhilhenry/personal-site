@@ -7,7 +7,7 @@
   ],
   "functions": {
     "**/**": {
-      "runtime": "@nuxtjs/vercel-builder"
+      "runtime": "@nuxtjs/vercel-builder@0.22.1"
     }
   }
 }
