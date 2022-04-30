@@ -17,7 +17,9 @@
     {
       "src": "api/**/*.py",
       "use": "@vercel/python",
-      "excludeFiles":"public/**"
+      "config":{
+        "serverFiles":["api/**"]
+      }
     }
   ]
 }
