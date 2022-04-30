@@ -19,7 +19,7 @@
       "use": "@vercel/python",
       "config":{
         "serverFiles":["api/**"],
-        "excludeFiles":["**/!(.py)"]
+        "excludeFiles":["!(api/**)"]
       }
     }
   ]
