@@ -13,11 +13,11 @@
         "serverFiles": [".nuxt/content/**", "content/**","api/**"],
         "generateStaticRoutes" : true
       }
+    },
+    {
+      "src": "api/**/*.py",
+      "use": "@vercel/python",
+      "excludeFiles":"public/**"
     }
-  ],
-  "functions":{
-    "api/**/*.py": {
-      "excludeFiles": "public/**"
-    }
-  }
+  ]
 }
