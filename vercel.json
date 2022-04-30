@@ -7,19 +7,19 @@
   ],
   "builds": [
     {
-      "src": "nuxt.config.js",
-      "use": "@nuxtjs/vercel-builder",
-      "config": {
-        "serverFiles": [".nuxt/content/**", "content/**"],
-        "generateStaticRoutes" : true
-      }
-    },
-    {
       "src": "api/**/*.py",
       "use": "@vercel/python",
       "config":{
         "serverFiles":["api/**"],
         "excludeFiles":["!(api/**)"]
+      }
+    },
+    {
+      "src": "nuxt.config.js",
+      "use": "@nuxtjs/vercel-builder",
+      "config": {
+        "serverFiles": [".nuxt/content/**", "content/**"],
+        "generateStaticRoutes" : true
       }
     }
   ]
